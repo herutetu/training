@@ -1,0 +1,11 @@
+<h1>投稿詳細</h1>
+
+<p>タイトル：<%= @article.title %></p>
+<p>投稿内容：</p>
+<%= simple_format(@article.content) %>
+
+<div class="flex-row">
+  <%= link_to "編集", edit_article_path(@article) %>
+  <%= link_to "一覧へ戻る", articles_path %>
+  <%= button_to "削除", article_path(@article), method: :delete %>
+</div>
